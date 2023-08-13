@@ -40,7 +40,7 @@ export default function StudentComponent({ student }) {
     function getTrack(student) {
         if (student.codewars.current.total > 600
                 && student.certifications.resume && 
-                student.certifcations.linkedin && student.certifications.github && 
+                student.certifications.linkedin && student.certifications.github && 
                 student.certifications.mockInterview == true 
             ) 
             {
@@ -87,7 +87,7 @@ export default function StudentComponent({ student }) {
         )
     }
 
-const noteObtainer = notes.filter((note) => note.id == id);
+// const noteObtainer = notes.filter((note) => note.id == id);
 
 function submitHandler(e) {
     e.preventDefault();
@@ -130,7 +130,7 @@ function submitHandler(e) {
     return(
         <div className="student" key= {student.id}>
             <img src={student.profilePhoto} alt="student" />
-            <h2>{studentName}</h2>
+            <h2>{nameOfStudent}</h2>
             <div style={{color: "green"}}>{getTrack(student)}</div>
             <article>{student.username}</article>
             <br></br>

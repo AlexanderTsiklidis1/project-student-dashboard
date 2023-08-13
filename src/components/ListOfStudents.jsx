@@ -7,7 +7,7 @@ export default function ListOfStudents({ currentCohort, studentsTitle}) {
             <div className ="totalStudents">
                 Total Students: {currentCohort.Length}
             </div>
-            {classTitle.map((student) => {
+            {currentCohort.map((student) => {
                 return <StudentComponent key={student.id} student={student} />
             })};
         </div>

@@ -8,6 +8,7 @@ import ListOfStudents from "./components/ListOfStudents";
 
 function App() {
   
+  console.log("script is connected")
   const [students, setStudents] = useState(data);
   const [currentCohort, setCurrentCohort] = useState([...students]);
   const [studentsTitle, setStudentsTitle] = useState("All Students");
@@ -22,7 +23,7 @@ function App() {
 
   function filteredClasses([cohort]) {
     if (cohort) {
-      const filiteredList =students.filter((student) => student.cohort.cohortCode == cohort);
+      const filiteredList = students.filter((student) => student.cohort.cohortCode == cohort);
       setCurrentCohort([...filiteredList]);
       setStudentsTitle(cohort);
     }
@@ -31,8 +32,10 @@ function App() {
       setStudentsTitle("All Students");
     }
   }
-  cohorts.sort()
-    return (
+  
+cohorts.sort();
+
+return (
     <div className="skeleton">
       <header>Student Dashboard</header>
       <ClassList cohorts={cohorts} filteredClasses={filteredClasses} />
