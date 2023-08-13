@@ -73,6 +73,7 @@ export default function StudentComponent({ student }) {
         )
     }
 
+    const noteObtainer = notes.filter((note) =>  note.id === id);
     
     function notesController() {
         return (
@@ -115,7 +116,6 @@ export default function StudentComponent({ student }) {
         setComment("")
     };
     
-    const noteObtainer = notes.filter((note) =>  note.id === id);
     
     return(
         <div className="student" key= {student.id}>
