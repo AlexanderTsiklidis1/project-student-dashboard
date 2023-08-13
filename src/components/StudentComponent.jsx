@@ -67,7 +67,7 @@ export default function StudentComponent({ student }) {
                     <p>Resume: {processCertification(student, "resume")}</p>
                     <p>LinkedIn: {processCertification(student, "linkedin")} </p>
                     <p>Mock Interview: {processCertification(student, "mockInterview")} </p>
-                    <p> Github: {processCertification(student, "github")}%</p>
+                    <p> Github: {processCertification(student, "github")}</p>
                 </div>
             </>
         )
