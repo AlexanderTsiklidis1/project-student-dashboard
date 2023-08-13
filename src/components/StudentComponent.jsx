@@ -16,6 +16,8 @@ export default function StudentComponent({ student }) {
         setShowMore(!showMore)
     }
 
+
+
     function getTrack(student) {
         if (student.codewars.current.total > 600 &&
             student.certifications.resume &&
@@ -33,6 +35,10 @@ export default function StudentComponent({ student }) {
          else {
             return "✅";
         }
+    }
+
+    function goalPercentage() {
+        return Math.floor((student.codewars.current.total / student.codewars.goal.total) *100);
     }
 
 
@@ -120,7 +126,7 @@ function submitHandler(e) {
         <div className="student" key= {student.id}>
             <img src={student.profilePhoto} alt="student" />
             <h2>{nameOfStudent}</h2>
-            <div style={{color: "green"}}>{getTrack(student)}</div>
+            <div style={{color : "green"}}>{getTrack(student)}</div>
             <article>{student.username}</article>
             <br></br>
             <article>Birthday: {student.dob}</article>
