@@ -7,6 +7,7 @@ import ListOfStudents from "./components/ListOfStudents";
 
 
 function App() {
+  
   const [students, setStudents] = useState(data);
   const [currentCohort, setCurrentCohort] = useState([...students]);
   const [studentsTitle, setStudentsTitle] = useState("All Students");
@@ -19,7 +20,7 @@ function App() {
       }
   });
 
-  function filteredCohorts([cohort]) {
+  function filteredClasses([cohort]) {
     if (cohort) {
       const filiteredList =students.filter((student) => student.cohort.cohortCode == cohort);
       setCurrentCohort([...filiteredList]);
@@ -34,11 +35,11 @@ function App() {
     return (
     <div className="skeleton">
       <header>Student Dashboard</header>
-      <ClassList cohorts={cohorts} filteredCohorts={filteredCohorts} />
-      <ListOfStudents currentCohort={currentCohort}
+      <ClassList cohorts={cohorts} filteredClasses={filteredClasses} />
+      {/* <ListOfStudents currentCohort={currentCohort}
         students={students}
         studentsTitle={studentsTitle}
-      />
+      /> */}
       
     </div>
   );

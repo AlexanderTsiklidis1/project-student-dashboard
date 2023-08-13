@@ -2,6 +2,9 @@ import { useState } from "react";
 
 export default function StudentComponent({ student }) {
     const [notes, setNotes] = useState(false);
+    const [showNotes, setShowNotes] = useState(false);
+    const [showMore, setShowMore] = useState (false);
+    const []
 
     function processCertification(student, certificationType) {
         if (student.certifications[certificationType] == false) {
