@@ -10,4 +10,4 @@ A user of this app will be able to view some details on each of the students, an
 
 We hope this app is able to provide you with some insight into the Student Dashboard Project and we hope you enjoy its functionality!
 
-Link to deployed Application ()
+## Come check out Our React App at the following link : (https://tubular-mooncake-5bbb68.netlify.app)
