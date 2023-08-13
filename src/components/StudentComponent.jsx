@@ -4,16 +4,39 @@ export default function StudentComponent({ student }) {
     const [notes, setNotes] = useState(false);
     const [showNotes, setShowNotes] = useState(false);
     const [showMore, setShowMore] = useState (false);
-    const []
+    const [comment, setComment] = useState("");
+    const [typer, setTyper] = useState("");
+    
+    
+    function controlShowNotes() {
+        setShowNotes(!showNotes)
+    }
+    
+    function controlShowMore() {
+        setShowMore(!showMore)
+    }
 
+    function getTrack(student) {
+        if (student.codewars.current.total > 600 &&
+            student.certifications.resume &&
+            student.certifications.linkedin &&
+            student.certifications.github &&
+            student.certifications.mockInterview === true)
+        {
+            return <>On Track to Graduate</>
+        }
+    }
     function processCertification(student, certificationType) {
         if (student.certifications[certificationType] == false) {
             return "❌";
-        } else {
+        }
+         else {
             return "✅";
         }
     }
-}
+
+
+    
     function getTrack(student) {
         if (student.codewars.current.total > 600
                 && student.certifications.resume && 
@@ -63,3 +86,46 @@ export default function StudentComponent({ student }) {
             </>
         )
     }
+
+const noteObtainer = notes.filter((note) => note.id == id);
+
+function submitHandler(e) {
+    e.preventDefault();
+    const newNote = {
+        id: id, 
+        typer: typer,
+        comment: comment,
+    };
+    setNotes([...notes, newNote]);
+    setTyper("")
+    setComment("")
+
+}
+
+    function controlNotes() {
+        return (
+            <>
+                <form onSubmit={submitHandler} className="notesInput">
+                    <label htmlFor="id">ID</label>
+                    <input type="text" 
+                    id="id"
+                    value={typer}
+                    onChange={(e) => setTyper(e.target.value)}></input>
+                    <label htmlFor="comment">Comment</label>
+                    <input type="text" 
+                    id="comment"
+                    value= {comment}
+                    onChange={(e) => setComment(e.target.value)}></input>
+                    <button>Submit</button>
+                </form>
+                {noteObtainer.map((note, index) => {
+                    <div key={index}>
+                        <>
+                        {note.typer} says {note.comment}
+                        </>
+                    </div>
+                })}
+            </>
+        )
+    }
+}
