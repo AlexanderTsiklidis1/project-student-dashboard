@@ -127,6 +127,7 @@ export default function StudentComponent({ student }) {
             <article>{student.username}</article>
             <br></br>
             <article>Birthday: {student.dob}</article>
+            <br></br>
             <span onClick={controlShowMore}>{!showMore ? "ShowMore..." : "Show less..."}</span>
             {showMore ? (
                 <>
