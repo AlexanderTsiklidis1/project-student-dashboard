@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function StudentComponent({ student }) {
-    const [notes, setNotes] = useState(false);
+    const [notes, setNotes] = useState([]);
     const [showNotes, setShowNotes] = useState(false);
     const [showMore, setShowMore] = useState (false);
     const [comment, setComment] = useState("");
@@ -87,12 +87,12 @@ export default function StudentComponent({ student }) {
         return (
             <>
                 <form onSubmit={submitHandler} className="notesInput">
-                    <label htmlFor="id">ID</label>
+                    <label htmlFor="id">Commenter Name </label>
                     <input type="text" 
                     id="id"
                     value={typer}
                     onChange={(e) => setTyper(e.target.value)}></input>
-                    <label htmlFor="comment">Comment</label>
+                    <label htmlFor="comment">Comment </label>
                     <input type="text" 
                     id="comment"
                     value= {comment}
@@ -122,13 +122,15 @@ export default function StudentComponent({ student }) {
         setComment("")
     };
     
-    // const noteObtainer = notes.filter((note) =>  note.id === id);
+    const noteObtainer = notes.filter((note) =>  note.id === id);
     
     return(
         <div className="student" key= {student.id}>
             <img src={student.profilePhoto} alt="student" />
             <h2>{nameOfStudent}</h2>
-            <div style={{color : "green"}}>{getTrack(student)}</div>
+            <div style=
+                {{color : "green"}}>{getTrack(student)}
+            </div>
             <article>{student.username}</article>
             <br></br>
             <article>Birthday: {student.dob}</article>

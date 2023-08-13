@@ -8,7 +8,7 @@
     }
 
 header {
-    background-color: green;
+    background-color: blue;
     color: antiquewhite;
     grid-area: header;
     text-align: center;
@@ -17,3 +17,31 @@ header {
     padding: 25px;
 }
 
+.listOfStudents {
+    grid-area: students;
+    display: grid;
+}
+
+.cohort {
+    border-bottom: 3px solid blue;
+}
+
+.studentsTitle {
+    padding-bottom: 30px;
+    color: blue;
+}
+
+.student {
+    display: flex;
+    height: fit-content;
+    border: 3px solid blue;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px lightgrey;
+    flex-wrap: wrap;
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+
+}

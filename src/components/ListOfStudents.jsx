@@ -3,8 +3,8 @@ import StudentComponent from "./StudentComponent";
 export default function ListOfStudents({ currentCohort, studentsTitle}) {
     return (
         <div className="listOfStudents">
-            <h1>{studentsTitle}</h1>
-            <div className ="totalStudents">
+            <div className="studentsTitle">
+                <h2>{studentsTitle}</h2>
                 Total Students: {currentCohort.length}
             </div>
             {currentCohort.map((student) => {
