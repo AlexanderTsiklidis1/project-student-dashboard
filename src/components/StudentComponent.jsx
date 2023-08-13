@@ -51,7 +51,7 @@ export default function StudentComponent({ student }) {
     const nameOfStudent = `${student.names.preferredName} ${student.names.middleName} 
     ${student.names.surName}`;
 
-    function showMore(student) {
+    function getInfo(student) {
         return (
             <>
                 <div>
@@ -99,8 +99,7 @@ function submitHandler(e) {
     setNotes([...notes, newNote]);
     setTyper("")
     setComment("")
-
-}
+};
 
     function controlNotes() {
         return (
@@ -128,4 +127,25 @@ function submitHandler(e) {
             </>
         )
     }
+    return(
+        <div className="student" key= {student.id}>
+            <img src={student.profilePhoto} alt="student" />
+            <h2>{studentName}</h2>
+            <div style={{color: "green"}}>{getTrack(student)}</div>
+            <article>{student.username}</article>
+            <br></br>
+            <article>Birthday: {student.dob}</article>
+            <span onClick={controlShowMore}>{!showMore ? "ShowMore..." : "Show less..."}</span>
+            {showMore ? (
+                <>
+                {getInfo(student)} <br></br>
+                <span onClick={controlShowNotes}>
+                    {!showNotes ? "1-on-1 Notes" : "Hide 1-on-1 Notes"}
+                </span>
+                {showNotes ? <>{controlNotes(student)}</> : null}
+                </>
+            ) : null}       
+            
+        </div>
+    )
 }

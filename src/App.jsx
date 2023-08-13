@@ -36,10 +36,10 @@ function App() {
     <div className="skeleton">
       <header>Student Dashboard</header>
       <ClassList cohorts={cohorts} filteredClasses={filteredClasses} />
-      {/* <ListOfStudents currentCohort={currentCohort}
+      <ListOfStudents currentCohort={currentCohort}
         students={students}
         studentsTitle={studentsTitle}
-      /> */}
+      />
       
     </div>
   );
