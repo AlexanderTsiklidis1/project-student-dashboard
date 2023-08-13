@@ -21,3 +21,28 @@ export default function studentComponent({ student }) {
                 return <>On Track to Graduate</>
             }
     }
+
+    const nameOfStudent = `${student.names.preferredName} ${student.names.middleName} 
+    ${student.names.surName}`;
+
+    function getInfo(student) {
+        return (
+            <>
+            <div>
+                <h3>CodeWars:</h3>
+                Current Total: {student.codewars.current.total} <br>
+                </br>
+                Last Week: {student.codewars.current.lastWeek} <br>
+                </br> 
+                Goal: {student.codewars.goal.total} <br>
+                </br>
+                Percent of Goal Acheived: {goalPercentage(student)}%
+            </div>
+            <div>
+                <h3>Scores</h3>
+                Assignments: {student.cohort.scores.assignments * 100}% <br>
+                </br>
+            </div>
+            </>
+        )
+    }
