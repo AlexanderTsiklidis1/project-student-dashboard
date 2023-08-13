@@ -82,21 +82,8 @@ export default function StudentComponent({ student }) {
         )
     }
 
-// const noteObtainer = notes.filter((note) => note.id == id);
-
-function submitHandler(e) {
-    e.preventDefault();
-    const newNote = {
-        id: id, 
-        typer: typer,
-        comment: comment,
-    };
-    setNotes([...notes, newNote]);
-    setTyper("")
-    setComment("")
-};
-
-    function controlNotes() {
+    
+    function notesController() {
         return (
             <>
                 <form onSubmit={submitHandler} className="notesInput">
@@ -122,6 +109,21 @@ function submitHandler(e) {
             </>
         )
     }
+    
+    function submitHandler(e) {
+        e.preventDefault();
+        const newNote = {
+            id: id, 
+            typer: typer,
+            comment: comment,
+        };
+        setNotes([...notes, newNote]);
+        setTyper("")
+        setComment("")
+    };
+    
+    // const noteObtainer = notes.filter((note) =>  note.id === id);
+    
     return(
         <div className="student" key= {student.id}>
             <img src={student.profilePhoto} alt="student" />
@@ -137,7 +139,7 @@ function submitHandler(e) {
                 <span onClick={controlShowNotes}>
                     {!showNotes ? "1-on-1 Notes" : "Hide 1-on-1 Notes"}
                 </span>
-                {showNotes ? <>{controlNotes(student)}</> : null}
+                {showNotes ? <>{notesController(student)}</> : null}
                 </>
             ) : null}       
             

@@ -2,6 +2,7 @@ import { useState } from "react";
 import data from "./data/data.json";
 import ClassList from "./components/ClassList";
 import ListOfStudents from "./components/ListOfStudents";
+import "./App.css";
 
 
 
