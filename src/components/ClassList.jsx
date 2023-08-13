@@ -1,4 +1,4 @@
-export default function StartDateList({startDateLists, filteredStartDateLists}) {
+export default function classList({startDateLists, filteredStartDateLists}) {
     return (
         <div className="startDate">
             <ul>

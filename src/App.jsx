@@ -1,15 +1,16 @@
 import { useState } from "react";
 import data from "./data/data.json";
-import StartDateList from "./components/StartDateList";
+import classList from "./components/ClassList";
 import ListOfStudents from "./components/ListOfStudents";
 
 
 
+
 function App() {
-  const [] = useState(data);
-  const [] = useState([""]);
-  const [] = useState([...students]);
-  const [] = useState("");
+  const [students, setStudents] = useState(data);
+  const [currentCohort, setCurrentCohort] = useState([...students]);
+  const [cohorts, setCohorts] = useState(["All Students"]);
+  const [studentsTitle, setStudentsTitle] = useState("All Students");
     return (
     <div>
       <h1>Student Dashboard</h1>
