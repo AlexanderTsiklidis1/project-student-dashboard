@@ -1,7 +1,7 @@
 import { useState } from "react";
 import data from "./data/data.json";
 import StartDateList from "./components/StartDateList";
-import component2 from "./components/Component2";
+import ListOfStudents from "./components/ListOfStudents";
 
 
 
