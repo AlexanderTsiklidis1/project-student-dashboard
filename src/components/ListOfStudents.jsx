@@ -1,4 +1,4 @@
-import Component3 from "./Component3";
+import Component3 from "./StudentComponent";
 
 export default function ListOfStudents({ class, classTitle}) {
     return (
