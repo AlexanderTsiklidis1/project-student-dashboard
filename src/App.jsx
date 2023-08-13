@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data/data.json";
-import component1 from "./components/Component1";
+import StartDateList from "./components/StartDateList";
 import component2 from "./components/Component2";
 
 
