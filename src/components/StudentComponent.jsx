@@ -92,15 +92,17 @@ export default function StudentComponent({ student }) {
                     id="id"
                     value={typer}
                     onChange={(e) => setTyper(e.target.value)}></input>
+                    <br></br>
                     <label htmlFor="comment">Comment </label>
                     <input type="text" 
                     id="comment"
-                    value= {comment}
+                    value={comment}
                     onChange={(e) => setComment(e.target.value)}></input>
-                    <button>Submit</button>
+                    <br></br>
+                    <button>Add Note</button>
                 </form>
                 {noteObtainer.map((note, index) => {
-                    <div key={index}>
+                    <div className="comments">
                         <>
                         {note.typer} says {note.comment}
                         </>

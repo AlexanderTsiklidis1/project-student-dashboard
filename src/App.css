@@ -45,3 +45,19 @@ header {
     align-items: center;
 
 }
+
+input {
+    display: block;
+}
+
+.classChoose {
+    text-decoration: bold;
+    text-align: center;
+    font-family:    Georgia, 'Times New Roman', Times, serif
+}
+
+h3 {
+    font-family:    Georgia, 'Times New Roman', Times, serif;
+}
+
+
