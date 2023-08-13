@@ -49,7 +49,7 @@ export default function StudentComponent({ student }) {
     }
 
     const nameOfStudent = `${student.names.preferredName} ${student.names.middleName} 
-    ${student.names.surName}`;
+    ${student.names.surname}`;
 
     function getInfo(student) {
         return (
