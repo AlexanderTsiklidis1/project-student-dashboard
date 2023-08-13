@@ -36,17 +36,6 @@ export default function StudentComponent({ student }) {
     }
 
 
-    
-    function getTrack(student) {
-        if (student.codewars.current.total > 600
-                && student.certifications.resume && 
-                student.certifications.linkedin && student.certifications.github && 
-                student.certifications.mockInterview == true 
-            ) 
-            {
-                return <>On Track to Graduate</>
-            }
-    }
 
     const nameOfStudent = `${student.names.preferredName} ${student.names.middleName} 
     ${student.names.surname}`;
