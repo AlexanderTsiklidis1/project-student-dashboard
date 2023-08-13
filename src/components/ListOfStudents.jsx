@@ -1,4 +1,4 @@
-import Component3 from "./StudentComponent";
+import StudentComponent from "./StudentComponent";
 
 export default function ListOfStudents({ class, classTitle}) {
     return (
@@ -8,7 +8,7 @@ export default function ListOfStudents({ class, classTitle}) {
                 Total Students: {classTitle.Length}
             </div>
             {classTitle.map((student) => {
-                return <Component3 key={student.id} student={student} />
+                return <StudentComponent key={student.id} student={student} />
             })};
         </div>
     )

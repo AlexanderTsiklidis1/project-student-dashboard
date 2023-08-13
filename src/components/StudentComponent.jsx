@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function studentComponent({ student }) {
+export default function StudentComponent({ student }) {
     const [notes, setNotes] = useState(false);
 
     function processCertification(student, certificationType) {
