@@ -51,32 +51,23 @@ export default function StudentComponent({ student }) {
             <>
                 <div>
                     <h3>CodeWars:</h3>
-                    Current Total: {student.codewars.current.total} <br>
-                    </br>
-                    Last Week: {student.codewars.current.lastWeek} <br>
-                    </br> 
-                    Goal: {student.codewars.goal.total} <br>
-                    </br>
-                    Percent of Goal Acheived: {goalPercentage(student)}%
+                    <p>Current Total: {student.codewars.current.total}</p> 
+                    <p>Last Week: {student.codewars.current.lastWeek} </p> 
+                    <p>Goal: {student.codewars.goal.total} </p>
+                    <p>Percent of Goal Acheived: {goalPercentage(student)}%</p>
                 </div>
                 <div>
                     <h3>Scores</h3>
-                    Assignments: {student.cohort.scores.assignments * 100}% <br>
-                    </br>
-                    Projects: {student.cohort.scores.projects * 100 }% <br>
-                    </br>
-                    Assessments: {student.cohort.scores.assessments * 100}% <br>
-                    </br>
+                    <p>Assignments: {student.cohort.scores.assignments * 100}% </p>
+                    <p>Projects: {student.cohort.scores.projects * 100 }% </p>
+                    <p>Assessments: {student.cohort.scores.assessments * 100}% </p>
                 </div>
                 <div>
                     <h3>Certifications:</h3>
-                    Resume: {processCertification(student, "resume")} <br>
-                    </br>
-                    LinkedIn: {processCertification(student, "linkedin")} <br>
-                    </br> 
-                    Mock Interview: {processCertification(student, "mockInterview")} <br>
-                    </br>
-                    Github: {processCertification(student, "github")}%
+                    <p>Resume: {processCertification(student, "resume")}</p>
+                    <p>LinkedIn: {processCertification(student, "linkedin")} </p>
+                    <p>Mock Interview: {processCertification(student, "mockInterview")} </p>
+                    <p> Github: {processCertification(student, "github")}%</p>
                 </div>
             </>
         )
